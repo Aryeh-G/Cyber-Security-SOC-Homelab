@@ -79,7 +79,6 @@ DC01 recorded Event ID 4740 after the account lockout occurred.
 ![Event ID 4740 Details](4740%20Event%20Log%20Details%20Tab.png)
 
 The event details identify `jdoe` as the target account and `CLIENT` as the caller computer associated with the lockout.
-
 ## What I Learned
 
 This lab showed me how an Active Directory account lockout policy affects authentication and how the resulting lockout can be investigated using Windows Security logs.
