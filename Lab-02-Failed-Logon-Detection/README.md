@@ -4,7 +4,7 @@
 
 The objective of this lab was to configure Windows security auditing in an Active Directory environment and investigate failed authentication attempts using Windows Security Event Logs.
 
-This lab demonstrates how failed logon activity can be identified through Event ID 4625, which is commonly reviewed during authentication-related security investigations.
+This lab demonstrates how failed logon activity can be identified through Event ID 4625
 
 ##  Lab Overview
 
