@@ -91,11 +91,11 @@ A Finance folder was configured as a network share on DC01 and made available th
 
 The domain client successfully accessed the Finance network share hosted on DC01, validating connectivity and access to the shared resource.
 
-##  Key Takeaways
+## What I Learned
 
-- Active Directory provides centralized identity management in Windows enterprise environments
-- Users and security groups are fundamental components of access control
-- Group-based permissions are more scalable than assigning permissions individually
-- Domain Controllers provide centralized authentication and authorization
-- Domain-joined systems rely on Active Directory for domain authentication
-- Organizational Units provide a structured way to organize and manage directory objects
+- How to set up and manage users and security groups in Active Directory.
+- How to join a Windows client to an Active Directory domain.
+- How group membership can be used to manage access to shared resources.
+- How a Domain Controller provides centralized authentication for domain users and computers.
+- How Organizational Units can be used to organize Active Directory objects.
+- How to test access to a network share from a domain-joined client.
