@@ -71,10 +71,9 @@ Advanced Audit Policy was configured to record both successful and failed logon 
 
 Windows Event Viewer recorded Event ID 4625 following a failed authentication attempt.
 
-##  Key Takeaways
+## What I Learned
 
-- Windows auditing can provide visibility into authentication activity.
-- Event ID 4625 identifies failed Windows logon attempts.
-- Group Policy can centrally configure auditing within an Active Directory environment.
-- Windows Security logs provide information that can be used during authentication investigations.
-- Repeated failed authentication events can be investigated for potentially suspicious activity.
+- How to configure Windows logon auditing through Group Policy.
+- How failed authentication attempts appear in Windows Security logs.
+- How to identify and investigate Event ID 4625 in Event Viewer.
+- How repeated failed logons can provide useful information when investigating suspicious authentication activity.
