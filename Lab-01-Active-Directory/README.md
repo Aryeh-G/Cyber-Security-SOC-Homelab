@@ -1,10 +1,10 @@
 # Lab 1 – Active Directory Setup and User Management
 
-## 📌 Objective
+##  Objective
 
 In this lab, I built a basic Active Directory environment using Windows Server and configured domain users, groups, and permissions. The goal was to understand identity management and how user access is controlled in a Windows domain environment.
 
-## 🧠 Lab Overview
+##  Lab Overview
 
 In this lab environment:
 
@@ -14,7 +14,7 @@ In this lab environment:
 - A Windows client machine was joined to the domain
 - Users and security groups were created and managed within Active Directory
 
-## ⚙️ What I Implemented
+##  What I Implemented
 
 - Installed and configured Active Directory Domain Services (AD DS)
 - Promoted Windows Server to a Domain Controller (`DC01`)
@@ -28,9 +28,9 @@ In this lab environment:
 - Logged into the client using domain user accounts
 - Tested access to shared resources based on assigned permissions
 
-## 🔐 Identity & Access Concepts
+##  Identity & Access Concepts
 
-### 👤 User Accounts
+###  User Accounts
 
 Each user is uniquely identified within the Active Directory domain.
 
@@ -40,7 +40,7 @@ Example:
 
 Domain accounts allow authentication and access to centrally managed resources.
 
-### 👥 Security Groups
+###  Security Groups
 
 Security groups were used to manage access efficiently.
 
@@ -48,13 +48,13 @@ Rather than assigning permissions individually to every user, users can be place
 
 This provides a more scalable method of access management.
 
-### 🗂️ Organizational Units (OUs)
+###  Organizational Units (OUs)
 
 Organizational Units were used to logically organize Active Directory objects such as users and groups.
 
 OUs make Active Directory easier to manage and provide a structure that can later be used for applying Group Policy Objects (GPOs).
 
-## 🧪 Testing & Validation
+##  Testing & Validation
 
 To validate the Active Directory configuration, I:
 
@@ -63,7 +63,7 @@ To validate the Active Directory configuration, I:
 - Confirmed security group membership
 - Tested access to shared resources based on assigned permissions
 
-## 📸 Screenshots
+##  Screenshots
 
 ### Active Directory User and Group Membership
 
@@ -95,7 +95,7 @@ A Finance folder was configured as a network share on DC01 and made available th
 
 The domain client successfully accessed the Finance network share hosted on DC01, validating connectivity and access to the shared resource.
 
-## 🧠 Key Takeaways
+##  Key Takeaways
 
 - Active Directory provides centralized identity management in Windows enterprise environments
 - Users and security groups are fundamental components of access control
