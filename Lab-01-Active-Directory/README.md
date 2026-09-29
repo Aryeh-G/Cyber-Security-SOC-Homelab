@@ -65,7 +65,35 @@ To validate the Active Directory configuration, I:
 
 ## 📸 Screenshots
 
-Screenshots documenting the configuration and validation of the Active Directory environment are included below.
+### Active Directory User and Group Membership
+
+![Active Directory User and Finance Group Membership](screenshots/01-AD-User-Finance-Group.png)
+
+The domain user `jdoe` was added to the Finance security group, demonstrating group-based user management in Active Directory.
+
+### Client Network Configuration
+
+![Client Network Configuration](screenshots/02-Client-Network-Config.png)
+
+The Windows client was configured on the lab network for communication with the Domain Controller.
+
+### Domain Controller Network Configuration
+
+![Domain Controller Network Configuration](screenshots/03-DC01-Network-Config.png)
+
+DC01 was configured with a static IP address to provide consistent Active Directory and DNS services within the lab environment.
+
+### Finance Network Share Configuration
+
+![Finance Network Share Configuration](screenshots/04-Finance-Share-Config.png)
+
+A Finance folder was configured as a network share on DC01 and made available through the UNC path `\\DC01\Finance`.
+
+### Finance Share Access Validation
+
+![Finance Share Access Validation](screenshots/05-Finance-Share-Access.png)
+
+The domain client successfully accessed the Finance network share hosted on DC01, validating connectivity and access to the shared resource.
 
 ## 🧠 Key Takeaways
 
