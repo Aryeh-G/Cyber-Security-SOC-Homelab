@@ -38,21 +38,17 @@ Example:
 
 `LAB\jdoe`
 
-Domain accounts allow authentication and access to centrally managed resources.
-
 ###  Security Groups
 
 Security groups were used to manage access efficiently.
 
-Rather than assigning permissions individually to every user, users can be placed into groups and permissions can be assigned to those groups.
+Rather than assigning permissions individually to every user, users were placed into groups and permissions were assigned to those groups.
 
-This provides a more scalable method of access management.
+I did this to provide s a more scalable method of access management.
 
 ###  Organizational Units (OUs)
 
 Organizational Units were used to logically organize Active Directory objects such as users and groups.
-
-OUs make Active Directory easier to manage and provide a structure that can later be used for applying Group Policy Objects (GPOs).
 
 ##  Testing & Validation
 
