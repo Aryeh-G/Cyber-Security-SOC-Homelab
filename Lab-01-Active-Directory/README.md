@@ -67,7 +67,7 @@ To validate the Active Directory configuration, I:
 
 ### Active Directory User and Group Membership
 
-![Active Directory User and Finance Group Membership](01-Active-Directory-users-jdoe-...)
+![Active Directory User and Finance Group Membership](01-Active-Directory-users-jdoe-FinanceGroup)
 
 The domain user `jdoe` was added to the Finance security group, demonstrating group-based user management in Active Directory.
 
