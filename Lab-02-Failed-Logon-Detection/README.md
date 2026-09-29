@@ -38,13 +38,10 @@ Configured to audit:
 - Success
 - Failure
 
-This allows Windows to record authentication activity that can later be reviewed during security investigations.
-
 ##  Event ID 4625 – Failed Logon
 
 Windows Security Event ID **4625** is generated when an account fails to log on.
 
-Information contained within a 4625 event can help an analyst investigate authentication failures, including:
 
 - Account information
 - Logon type
@@ -52,7 +49,6 @@ Information contained within a 4625 event can help an analyst investigate authen
 - Timestamp
 - Failure details
 
-Repeated 4625 events may warrant investigation for activity such as repeated incorrect credentials or attempted brute-force authentication.
 
 ##  Testing & Validation
 
@@ -60,7 +56,6 @@ Failed authentication activity was generated in the lab environment.
 
 Windows Event Viewer was then used on DC01 to review the Security log and confirm that the failed authentication generated **Event ID 4625 – An account failed to log on**.
 
-This demonstrated how Windows authentication failures can be recorded and investigated through Security Event Logs.
 
 ##  Screenshots
 
@@ -76,8 +71,6 @@ Advanced Audit Policy was configured to record both successful and failed logon 
 
 Windows Event Viewer recorded Event ID 4625 following a failed authentication attempt.
 
-Windows Event Viewer recorded Event ID 4625 following a failed authentication attempt.
-
 ##  Key Takeaways
 
 - Windows auditing can provide visibility into authentication activity.
@@ -85,12 +78,3 @@ Windows Event Viewer recorded Event ID 4625 following a failed authentication at
 - Group Policy can centrally configure auditing within an Active Directory environment.
 - Windows Security logs provide information that can be used during authentication investigations.
 - Repeated failed authentication events can be investigated for potentially suspicious activity.
-
-##  Skills Demonstrated
-
-- Active Directory
-- Group Policy
-- Windows Security Auditing
-- Windows Event Viewer
-- Authentication Log Analysis
-- Failed Logon Investigation
