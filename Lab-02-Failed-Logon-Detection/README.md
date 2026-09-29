@@ -66,13 +66,15 @@ This demonstrated how Windows authentication failures can be recorded and invest
 
 ### Audit Policy Configuration
 
-![Audit Policy Configuration](01-Audit-Policy-Configuration.png)
+![Audit Policy Configuration](01-Audit-Policy-Configuration.png.png)
 
 Advanced Audit Policy was configured to record both successful and failed logon events.
 
 ### Failed Logon – Event ID 4625
 
-![Event ID 4625 Failed Logon](02-Event-ID-4625-Failed-Logon.png)
+![Event ID 4625 Failed Logon](02-Event-ID-4625-Failed-Logon.png.png)
+
+Windows Event Viewer recorded Event ID 4625 following a failed authentication attempt.
 
 Windows Event Viewer recorded Event ID 4625 following a failed authentication attempt.
 
