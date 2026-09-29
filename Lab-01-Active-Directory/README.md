@@ -79,7 +79,7 @@ The Windows client was configured on the lab network for communication with the 
 
 ### Domain Controller Network Configuration
 
-![Domain Controller Network Configuration](screenshots/03-DC01-Network-Config.png)
+![Domain Controller Network Configuration](03-DC01-Network-Config.png)
 
 DC01 was configured with a static IP address to provide consistent Active Directory and DNS services within the lab environment.
 
