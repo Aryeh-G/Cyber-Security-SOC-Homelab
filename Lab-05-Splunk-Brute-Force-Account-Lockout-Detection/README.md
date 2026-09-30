@@ -21,13 +21,13 @@ I used Windows Event ID 4625 to identify failed authentication attempts and grou
 
 The detection search used was:
 
-`index=main EventCode=4625`
-`| stats count by Account_Name`
-`| where count > 5`
+```spl
+index=main EventCode=4625
+| stats count by Account_Name
+| where count > 5
+```
 
-This detection looks for accounts with more than five failed authentication events in the search window.
-
-I also reviewed failed authentication activity by account and source network address to better understand where the authentication attempts were coming from.
+This detection looks for accounts with more than five failed authentication events within the search window.
 
 ## Brute-Force Alert
 
@@ -40,7 +40,7 @@ For lab testing, the alert was configured to:
 - Trigger when the search returned results
 - Add triggered events to Splunk's Triggered Alerts
 
-I then generated failed authentication attempts and verified that the alert appeared in the trigger history.
+I then generated repeated failed authentication attempts and verified that the alert appeared in the trigger history.
 
 ## Account Lockout Detection
 
@@ -48,7 +48,9 @@ I also created a detection for Active Directory account lockouts using Windows E
 
 The search used was:
 
-`index=main EventCode=4740`
+```spl
+index=main EventCode=4740
+```
 
 This detects Windows Security events generated when an account becomes locked out.
 
@@ -61,6 +63,44 @@ I converted the Event ID 4740 search into a second scheduled Splunk alert named 
 After generating the account lockout, I verified that the detection triggered and appeared in Splunk's alert trigger history.
 
 This provided visibility into both repeated authentication failures and the resulting account lockout.
+
+## Screenshots
+
+### Brute-Force Detection Logic
+
+![Brute-Force Detection Logic](Creating%20Detection%20Rule_%20someone%20fails%20login%205%20or%20more%20time%20than%20log%20it.png)
+
+I created a Splunk detection search using Event ID 4625 and a threshold to identify accounts generating repeated failed authentication events.
+
+### Brute-Force Alert Configuration
+
+![Brute-Force Alert Configuration](Turning%20Dete4ction%20Rule%20into%20an%20ALERT.png)
+
+I converted the detection search into a scheduled Splunk alert.
+
+### Brute-Force Alert Trigger History
+
+![Brute-Force Detection](Brute%20Force%20Detection.png)
+
+The `Brute Force Detection` alert successfully triggered after repeated failed authentication activity was generated.
+
+### Account Lockout Detection
+
+![Account Lockout Detection](Creating%20Account%20Lockout%20Alert.png)
+
+I searched for Event ID 4740 to identify Active Directory account lockout events.
+
+### Locked Account on CLIENT
+
+![Locked jdoe Account](Locked%20user%20jdoe%20out.png)
+
+Repeated failed authentication attempts caused the `jdoe` account to reach the domain lockout threshold and become locked.
+
+### Account Lockout Alert Trigger History
+
+![Account Lockout Alert](detected%20jdoe%20account%20lockout%20detection%20.png)
+
+The `Account Lockout Detection` alert successfully triggered and appeared in Splunk's trigger history.
 
 ## What I Learned
 
