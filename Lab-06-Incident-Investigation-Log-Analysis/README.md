@@ -108,6 +108,44 @@ The Splunk searches showed:
 
 Because the activity was intentionally generated in the lab, these events represent a simulated brute-force scenario rather than an unknown real-world attack.
 
+## Screenshots
+
+### Identify Relevant Authentication Events
+
+![Relevant Authentication Events](Starting%20from%20the%20Incident%20-%20What%20events%20exist%20for%20the%20user.png)
+
+I began the investigation by searching for Event ID 4625 and Event ID 4740 activity associated with `jdoe`.
+
+### Build the Investigation Timeline
+
+![Investigation Timeline](Building%20Investigation%20table%20%5Dstep%202.png)
+
+I organized the authentication events by time, Event ID, account name, source network address, and host to review the sequence of activity.
+
+### Count Failed Authentication Attempts
+
+![Failed Authentication Count](Count%20Failed%20Attempts%20for%20Specific%20User%20step%203.png)
+
+I counted the Event ID 4625 events associated with `jdoe` to determine the amount of failed authentication activity.
+
+### Identify the Source
+
+![Authentication Source](Identify%20Attacker%20by%20I.P%20Step%204.png)
+
+I grouped failed authentication events by `Source_Network_Address` to identify the source associated with the attempts.
+
+### Analyze the Authentication Timeline
+
+![Authentication Timeline](Checking%20Attack%20Pattern%20%28Timeline%29%20Step%205.png)
+
+I used `timechart` to examine how the failed authentication events were distributed over time.
+
+### Correlate Failed Logons and Account Lockouts
+
+![Event Correlation](Correlating%20Everything--%20How%20many%20failures%20vs%20lockouts%20step%206.png)
+
+I compared Event ID 4625 and Event ID 4740 activity to correlate failed authentication attempts with account lockout events.
+
 ## What I Learned
 
 - How to investigate authentication activity using Splunk.
