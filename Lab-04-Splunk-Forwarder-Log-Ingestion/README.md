@@ -33,6 +33,32 @@ The search returned multiple failed authentication events associated with the ac
 
 I then expanded an individual event to examine additional authentication information recorded in the Windows Security log.
 
+## Screenshots
+
+### Splunk Receiving Port
+
+![Splunk Receiving Port](Settings_Forwarding%20and%20Receiving_Receiving_port%209997%20Splunk%20is%20acting%20as%20a%20SIEM%20Receiver.png)
+
+Splunk was configured to listen for forwarded data on port `9997`.
+
+### Windows Security Logs in Splunk
+
+![Splunk Search Showing Logs](Splunk%20Search%20Showing%20Logs.png)
+
+Windows Security events were successfully received and indexed by Splunk.
+
+### Failed Logons for jdoe
+
+![Failed Logons for jdoe](searching%20for%20specific%20user%20jdoe.png)
+
+I filtered Event ID 4625 results for the `jdoe` account to investigate failed authentication attempts associated with the user.
+
+### Event ID 4625 Details
+
+![Event ID 4625 Details](Expanded%20Event%20View%20of%20Account%20Name,%20Source%20network%20address,%20and%20Event%20code%204625.png)
+
+Expanding the event provided additional authentication details, including the account name, Event ID, failure reason, and other Windows Security event fields.
+
 ## What I Learned
 
 - How to configure Splunk to receive forwarded Windows event logs.
