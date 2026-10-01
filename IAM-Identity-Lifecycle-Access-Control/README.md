@@ -199,7 +199,7 @@ This provided additional visibility into changes made to the identity during the
 
 I searched the Windows Security logs in Splunk for activity associated with Jordan Rivera and the IAM security groups.
 
-![Splunk IAM Investigation](14-%20Searching%20on%20Splunk%20jordans%20account%20creations%2C%20changes%2C%20group%20membership%20activity%20and%20disabling.png)
+![Splunk IAM Investigation](14-%20Searching%20on%20Splunk%20jordans%20account%20careations%2C%20changes%2C%20group%20membership%20activity%20and%20disabling.png)
 
 Using Splunk allowed me to review the historical activity associated with the account instead of relying only on the current state displayed in Active Directory.
 
