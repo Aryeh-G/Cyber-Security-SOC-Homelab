@@ -49,16 +49,16 @@ kerberos
 
 The capture contained Kerberos authentication exchanges including:
 
-- AS-REQ
-- AS-REP
+- **AS-REQ (Authentication Service Request):** The client sends this request to the Domain Controller's Key Distribution Center (KDC) to begin the Kerberos authentication process and request a Ticket Granting Ticket (TGT).
+- **AS-REP (Authentication Service Reply):** The KDC sends this response back to the client as part of issuing the TGT.
 
-I also observed Kerberos error traffic during the capture, including pre-authentication failures.
+I also observed Kerberos pre-authentication failures during the capture.
 
-Reviewing these packets provided visibility into communication between the client and Domain Controller during Kerberos authentication.
+Reviewing these packets provided visibility into the initial Kerberos authentication process between the client and Domain Controller.
 
 ## SMB Analysis
 
-I applied the following filter:
+I applied the following Wireshark display filter:
 
 ```text
 smb2
@@ -101,7 +101,8 @@ The SMB2 capture showed the session setup process and NTLMSSP authentication exc
 
 - How to capture and filter network traffic using Wireshark.
 - How DNS traffic appears during Windows network communication.
-- How to identify Kerberos authentication requests and responses in packet captures.
+- How to identify Kerberos AS-REQ and AS-REP authentication messages.
+- How the Kerberos authentication process begins between a domain client and the KDC.
 - How to recognize SMB2 session setup traffic.
 - How NTLMSSP authentication can appear within SMB2 communication.
 - How packet analysis provides additional visibility into authentication activity beyond Windows event logs and SIEM searches.
