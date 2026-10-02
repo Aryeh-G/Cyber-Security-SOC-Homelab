@@ -1,4 +1,4 @@
-# Lab 11 – IAM Identity Lifecycle & Access Control
+# IAM Identity Lifecycle & Access Control
 
 ## Objective
 
